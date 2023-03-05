@@ -1,7 +1,7 @@
 name: morning
 on:
   schedule:
-  - cron:  '8 0 * * *'
+  - cron:  '24 23 * * *'
   workflow_dispatch:
 
 jobs:
@@ -30,4 +30,3 @@ jobs:
       START_DATE: ${{ secrets.START_DATE }}
       BIRTHDAY: ${{ secrets.BIRTHDAY }}
       CITY: ${{ secrets.CITY }}
-      WEATHER_KEY: ${{secrets.WEATHER_KEY}}

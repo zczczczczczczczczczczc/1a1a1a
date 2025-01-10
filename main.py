@@ -18,16 +18,16 @@ user_ids = os.environ["USER_ID"].split("\n")
 template_id = os.environ["TEMPLATE_ID"]
 
 
-def get_weather():
-  url = "https://restapi.amap.com/v3/weather/weatherInfo?key=85beb4960db2633fd77352ff4ae53c7e&city=510705"
-  res = requests.get(url).json()
-  weather = res['lives'][0]
-  print("res======>",res)
-  print("res======>",res['lives'])
-  print("weather=====>",weather)
-  print("temperature=====>",weather['temperature'])
-  print("math=====>",math.floor(int(weather['temperature'])))
-  return weather['weather'], math.floor(int(weather['temperature']))
+# def get_weather():
+#   url = "https://restapi.amap.com/v3/weather/weatherInfo?key=85beb4960db2633fd77352ff4ae53c7e&city=510705"
+#   res = requests.get(url).json()
+#   weather = res['lives'][0]
+#   print("res======>",res)
+#   print("res======>",res['lives'])
+#   print("weather=====>",weather)
+#   print("temperature=====>",weather['temperature'])
+#   print("math=====>",math.floor(int(weather['temperature'])))
+#   return weather['weather'], math.floor(int(weather['temperature']))
 
 def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
